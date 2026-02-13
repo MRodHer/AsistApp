@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Settings, Clock, Wifi, Plus, Edit2, Trash2, Save } from 'lucide-react';
+import { Clock, Wifi, Plus, Edit2, Trash2, Save } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import type { Horario, Dispositivo } from '../types/database';
 

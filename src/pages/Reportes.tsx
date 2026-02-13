@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { FileText, Download, Calendar, Users, Clock, AlertTriangle } from 'lucide-react';
+import { FileText, Download, Calendar, Clock, AlertTriangle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isWeekend } from 'date-fns';
 import { es } from 'date-fns/locale';
@@ -43,9 +43,8 @@ export function Reportes() {
     .filter(d => !isWeekend(d)).length;
 
   const getEmpleadoStats = (empleadoId: string) => {
-    const empAsistencias = asistencias?.filter(a => a.empleado_id === empleadoId) || [];
-    const diasConEntrada = new Set(empAsistencias.filter(a => a.tipo_registro === 'entrada').map(a => a.fecha)).size;
-    const diasConSalida = new Set(empAsistencias.filter(a => a.tipo_registro === 'salida').map(a => a.fecha)).size;
+    const empAsistencias = asistencias?.filter((a: any) => a.empleado_id === empleadoId) || [];
+    const diasConEntrada = new Set(empAsistencias.filter((a: any) => a.tipo_registro === 'entrada').map((a: any) => a.fecha)).size;
 
     return {
       diasTrabajados: diasConEntrada,
