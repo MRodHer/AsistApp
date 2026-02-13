@@ -1,0 +1,27 @@
+# Project Settings - Vet-Clinical
+project:
+  name: "Vet-Clinical"
+  display_name: "Sistema de Gestión Veterinaria"
+  description: "Sistema modular para clínicas veterinarias en México con gestión de pacientes, consultas, inventario, hospitalización y facturación"
+  type: "web_application"
+
+  stack:
+    frontend: "React 18 + TypeScript + Vite + Tailwind CSS"
+    backend: "Supabase (PostgreSQL + RLS)"
+    auth: "Supabase Auth"
+
+  modules:
+    core:
+      - clientes_mascotas      # Clientes y mascotas
+      - consultas              # Consultas veterinarias
+      - inventario             # Control de inventario
+    optional:
+      - hospitalizacion        # Hospitalización de mascotas
+      - facturacion            # Facturación CFDI
+      - pagos                  # Control de pagos
+      - whatsapp               # Notificaciones WhatsApp
+
+  target_users:
+    - "Clínicas veterinarias pequeñas"
+    - "Veterinarios independientes"
+    - "Hospitales veterinarios"

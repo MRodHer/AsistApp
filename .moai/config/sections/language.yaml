@@ -1,0 +1,9 @@
+# Language Settings
+language:
+  conversation_language: es
+  conversation_language_name: Spanish
+  agent_prompt_language: en
+  git_commit_messages: en
+  code_comments: en
+  documentation: es
+  error_messages: es
